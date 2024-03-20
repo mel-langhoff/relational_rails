@@ -1,243 +1,243 @@
 [ ] done
 
-User Story 1, Parent Index 
+User Story 1, artist Index 
 
-For each parent table
+For each artist table
 As a visitor
-When I visit '/parents'
-Then I see the name of each parent record in the system
+When I visit '/artists'
+Then I see the name of each artist record in the system
 [ ] done
 
-User Story 2, Parent Show 
+User Story 2, artist Show 
 
 As a visitor
-When I visit '/parents/:id'
-Then I see the parent with that id including the parent's attributes
-(data from each column that is on the parent table)
+When I visit '/artists/:id'
+Then I see the artist with that id including the artist's attributes
+(data from each column that is on the artist table)
 [ ] done
 
-User Story 3, Child Index 
+User Story 3, album Index 
 
 As a visitor
-When I visit '/child_table_name'
-Then I see each Child in the system including the Child's attributes
-(data from each column that is on the child table)
+When I visit '/album_table_name'
+Then I see each album in the system including the album's attributes
+(data from each column that is on the album table)
 [ ] done
 
-User Story 4, Child Show 
+User Story 4, album Show 
 
 As a visitor
-When I visit '/child_table_name/:id'
-Then I see the child with that id including the child's attributes
-(data from each column that is on the child table)
+When I visit '/album_table_name/:id'
+Then I see the album with that id including the album's attributes
+(data from each column that is on the album table)
 [ ] done
 
-User Story 5, Parent Children Index 
+User Story 5, artist albumren Index 
 
 As a visitor
-When I visit '/parents/:parent_id/child_table_name'
-Then I see each Child that is associated with that Parent with each Child's attributes
-(data from each column that is on the child table)
+When I visit '/artists/:artist_id/album_table_name'
+Then I see each album that is associated with that artist with each album's attributes
+(data from each column that is on the album table)
 ActiveRecord
 [ ] done
 
-User Story 6, Parent Index sorted by Most Recently Created 
+User Story 6, artist Index sorted by Most Recently Created 
 
 As a visitor
-When I visit the parent index,
+When I visit the artist index,
 I see that records are ordered by most recently created first
 And next to each of the records I see when it was created
 [ ] done
 
-User Story 7, Parent Child Count
+User Story 7, artist album Count
 
 As a visitor
-When I visit a parent's show page
-I see a count of the number of children associated with this parent
+When I visit a artist's show page
+I see a count of the number of albumren associated with this artist
 Usability
 [ ] done
 
-User Story 8, Child Index Link
+User Story 8, album Index Link
 
 As a visitor
 When I visit any page on the site
-Then I see a link at the top of the page that takes me to the Child Index
+Then I see a link at the top of the page that takes me to the album Index
 [ ] done
 
-User Story 9, Parent Index Link
+User Story 9, artist Index Link
 
 As a visitor
 When I visit any page on the site
-Then I see a link at the top of the page that takes me to the Parent Index
+Then I see a link at the top of the page that takes me to the artist Index
 [ ] done
 
-User Story 10, Parent Child Index Link
+User Story 10, artist album Index Link
 
 As a visitor
-When I visit a parent show page ('/parents/:id')
-Then I see a link to take me to that parent's `child_table_name` page ('/parents/:id/child_table_name')
+When I visit a artist show page ('/artists/:id')
+Then I see a link to take me to that artist's `album_table_name` page ('/artists/:id/album_table_name')
 Iteration 2
 CRUD
 [ ] done
 
-User Story 11, Parent Creation 
+User Story 11, artist Creation 
 
 As a visitor
-When I visit the Parent Index page
-Then I see a link to create a new Parent record, "New Parent"
+When I visit the artist Index page
+Then I see a link to create a new artist record, "New artist"
 When I click this link
-Then I am taken to '/parents/new' where I  see a form for a new parent record
-When I fill out the form with a new parent's attributes:
-And I click the button "Create Parent" to submit the form
-Then a `POST` request is sent to the '/parents' route,
-a new parent record is created,
-and I am redirected to the Parent Index page where I see the new Parent displayed.
+Then I am taken to '/artists/new' where I  see a form for a new artist record
+When I fill out the form with a new artist's attributes:
+And I click the button "Create artist" to submit the form
+Then a `POST` request is sent to the '/artists' route,
+a new artist record is created,
+and I am redirected to the artist Index page where I see the new artist displayed.
 [ ] done
 
-User Story 12, Parent Update 
+User Story 12, artist Update 
 
 As a visitor
-When I visit a parent show page
-Then I see a link to update the parent "Update Parent"
-When I click the link "Update Parent"
-Then I am taken to '/parents/:id/edit' where I  see a form to edit the parent's attributes:
+When I visit a artist show page
+Then I see a link to update the artist "Update artist"
+When I click the link "Update artist"
+Then I am taken to '/artists/:id/edit' where I  see a form to edit the artist's attributes:
 When I fill out the form with updated information
 And I click the button to submit the form
-Then a `PATCH` request is sent to '/parents/:id',
-the parent's info is updated,
-and I am redirected to the Parent's Show page where I see the parent's updated info
+Then a `PATCH` request is sent to '/artists/:id',
+the artist's info is updated,
+and I am redirected to the artist's Show page where I see the artist's updated info
 [ ] done
 
-User Story 13, Parent Child Creation 
+User Story 13, artist album Creation 
 
 As a visitor
-When I visit a Parent Children Index page
-Then I see a link to add a new adoptable child for that parent "Create Child"
+When I visit a artist albumren Index page
+Then I see a link to add a new adoptable album for that artist "Create album"
 When I click the link
-I am taken to '/parents/:parent_id/child_table_name/new' where I see a form to add a new adoptable child
-When I fill in the form with the child's attributes:
-And I click the button "Create Child"
-Then a `POST` request is sent to '/parents/:parent_id/child_table_name',
-a new child object/row is created for that parent,
-and I am redirected to the Parent Childs Index page where I can see the new child listed
+I am taken to '/artists/:artist_id/album_table_name/new' where I see a form to add a new adoptable album
+When I fill in the form with the album's attributes:
+And I click the button "Create album"
+Then a `POST` request is sent to '/artists/:artist_id/album_table_name',
+a new album object/row is created for that artist,
+and I am redirected to the artist albums Index page where I can see the new album listed
 [ ] done
 
-User Story 14, Child Update 
+User Story 14, album Update 
 
 As a visitor
-When I visit a Child Show page
-Then I see a link to update that Child "Update Child"
+When I visit a album Show page
+Then I see a link to update that album "Update album"
 When I click the link
-I am taken to '/child_table_name/:id/edit' where I see a form to edit the child's attributes:
-When I click the button to submit the form "Update Child"
-Then a `PATCH` request is sent to '/child_table_name/:id',
-the child's data is updated,
-and I am redirected to the Child Show page where I see the Child's updated information
+I am taken to '/album_table_name/:id/edit' where I see a form to edit the album's attributes:
+When I click the button to submit the form "Update album"
+Then a `PATCH` request is sent to '/album_table_name/:id',
+the album's data is updated,
+and I am redirected to the album Show page where I see the album's updated information
 ActiveRecord
 [ ] done
 
-User Story 15, Child Index only shows `true` Records 
+User Story 15, album Index only shows `true` Records 
 
 As a visitor
-When I visit the child index
+When I visit the album index
 Then I only see records where the boolean column is `true`
 [ ] done
 
-User Story 16, Sort Parent's Children in Alphabetical Order by name 
+User Story 16, Sort artist's albumren in Alphabetical Order by name 
 
 As a visitor
-When I visit the Parent's children Index Page
-Then I see a link to sort children in alphabetical order
+When I visit the artist's albumren Index Page
+Then I see a link to sort albumren in alphabetical order
 When I click on the link
-I'm taken back to the Parent's children Index Page where I see all of the parent's children in alphabetical order
+I'm taken back to the artist's albumren Index Page where I see all of the artist's albumren in alphabetical order
 Usability
 [ ] done
 
-User Story 17, Parent Update From Parent Index Page 
+User Story 17, artist Update From artist Index Page 
 
 As a visitor
-When I visit the parent index page
-Next to every parent, I see a link to edit that parent's info
+When I visit the artist index page
+Next to every artist, I see a link to edit that artist's info
 When I click the link
-I should be taken to that parent's edit page where I can update its information just like in User Story 12
+I should be taken to that artist's edit page where I can update its information just like in User Story 12
 [ ] done
 
-User Story 18, Child Update From Childs Index Page 
+User Story 18, album Update From albums Index Page 
 
 As a visitor
-When I visit the `child_table_name` index page or a parent `child_table_name` index page
-Next to every child, I see a link to edit that child's info
+When I visit the `album_table_name` index page or a artist `album_table_name` index page
+Next to every album, I see a link to edit that album's info
 When I click the link
-I should be taken to that `child_table_name` edit page where I can update its information just like in User Story 14
+I should be taken to that `album_table_name` edit page where I can update its information just like in User Story 14
 Iteration 3
 CRUD
 [ ] done
 
-User Story 19, Parent Delete 
+User Story 19, artist Delete 
 
 As a visitor
-When I visit a parent show page
-Then I see a link to delete the parent
-When I click the link "Delete Parent"
-Then a 'DELETE' request is sent to '/parents/:id',
-the parent is deleted, and all child records are deleted
-and I am redirected to the parent index page where I no longer see this parent
+When I visit a artist show page
+Then I see a link to delete the artist
+When I click the link "Delete artist"
+Then a 'DELETE' request is sent to '/artists/:id',
+the artist is deleted, and all album records are deleted
+and I am redirected to the artist index page where I no longer see this artist
 [ ] done
 
-User Story 20, Child Delete 
+User Story 20, album Delete 
 
 As a visitor
-When I visit a child show page
-Then I see a link to delete the child "Delete Child"
+When I visit a album show page
+Then I see a link to delete the album "Delete album"
 When I click the link
-Then a 'DELETE' request is sent to '/child_table_name/:id',
-the child is deleted,
-and I am redirected to the child index page where I no longer see this child
+Then a 'DELETE' request is sent to '/album_table_name/:id',
+the album is deleted,
+and I am redirected to the album index page where I no longer see this album
 ActiveRecord
 [ ] done
 
 User Story 21, Display Records Over a Given Threshold 
 
 As a visitor
-When I visit the Parent's children Index Page
+When I visit the artist's albumren Index Page
 I see a form that allows me to input a number value
 When I input a number value and click the submit button that reads 'Only return records with more than `number` of `column_name`'
 Then I am brought back to the current index page with only the records that meet that threshold shown.
 Usability
 [ ] done
 
-User Story 22, Parent Delete From Parent Index Page 
+User Story 22, artist Delete From artist Index Page 
 
 As a visitor
-When I visit the parent index page
-Next to every parent, I see a link to delete that parent
+When I visit the artist index page
+Next to every artist, I see a link to delete that artist
 When I click the link
-I am returned to the Parent Index Page where I no longer see that parent
+I am returned to the artist Index Page where I no longer see that artist
 [ ] done
 
-User Story 23, Child Delete From Childs Index Page 
+User Story 23, album Delete From albums Index Page 
 
 As a visitor
-When I visit the `child_table_name` index page or a parent `child_table_name` index page
-Next to every child, I see a link to delete that child
+When I visit the `album_table_name` index page or a artist `album_table_name` index page
+Next to every album, I see a link to delete that album
 When I click the link
-I should be taken to the `child_table_name` index page where I no longer see that child
+I should be taken to the `album_table_name` index page where I no longer see that album
 Extensions
 [ ] done
 
-Extension 1: Sort Parents by Number of Children 
+Extension 1: Sort artists by Number of albumren 
 
 As a visitor
-When I visit the Parents Index Page
-Then I see a link to sort parents by the number of `child_table_name` they have
+When I visit the artists Index Page
+Then I see a link to sort artists by the number of `album_table_name` they have
 When I click on the link
-I'm taken back to the Parent Index Page where I see all of the parents in order of their count of `child_table_name` (highest to lowest) And, I see the number of children next to each parent name
+I'm taken back to the artist Index Page where I see all of the artists in order of their count of `album_table_name` (highest to lowest) And, I see the number of albumren next to each artist name
 [ ] done
 
 Extension 2: Search by name (exact match)
 
 As a visitor
-When I visit an index page ('/parents') or ('/child_table_name')
+When I visit an index page ('/artists') or ('/album_table_name')
 Then I see a text box to filter results by keyword
 When I type in a keyword that is an exact match of one or more of my records and press the Search button
 Then I only see records that are an exact match returned on the page
@@ -246,7 +246,7 @@ Then I only see records that are an exact match returned on the page
 Extension 3: Search by name (partial match)
 
 As a visitor
-When I visit an index page ('/parents') or ('/child_table_name')
+When I visit an index page ('/artists') or ('/album_table_name')
 Then I see a text box to filter results by keyword
 When I type in a keyword that is an partial match of one or more of my records and press the Search button
 Then I only see records that are an partial match returned on the page
