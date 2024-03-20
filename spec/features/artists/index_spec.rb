@@ -18,8 +18,8 @@ RSpec.describe "Artist Index Page", type: :feature do
   describe 'user story 6' do
     it 'displays a list of all artists by most recently created' do
       visit '/artists'
-      
-      # alphabetical by first letter of the name
+
+      # alphabetical by first letter of the name attribute
       expect('Frank Zappa').to appear_before('The Beatles')
     end
   end
