@@ -16,7 +16,7 @@ When I visit '/artists/:id'
 Then I see the artist with that id including the artist's attributes
 (data from each column that is on the artist table)
 
-[ ] done
+[X] done
 
 User Story 3, album Index 
 
@@ -24,6 +24,7 @@ As a visitor
 When I visit '/albums'
 Then I see each album in the system including the album's attributes
 (data from each column that is on the album table)
+
 [ ] done
 
 User Story 4, album Show 
