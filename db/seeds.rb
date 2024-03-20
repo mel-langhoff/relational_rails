@@ -7,3 +7,6 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+
+Artist.create(name: 'The Beatles', still_recording: false, number_of_singles: 50)
+Artist.create(name: 'Frank Zappa', still_recording: false, number_of_singles: 60)
