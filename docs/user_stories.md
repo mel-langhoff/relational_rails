@@ -1,4 +1,4 @@
-[ ] done
+[X] done
 
 User Story 1, artist Index 
 
@@ -6,7 +6,8 @@ For each artist table
 As a visitor
 When I visit '/artists'
 Then I see the name of each artist record in the system
-[ ] done
+
+[X] done
 
 User Story 2, artist Show 
 
@@ -14,31 +15,35 @@ As a visitor
 When I visit '/artists/:id'
 Then I see the artist with that id including the artist's attributes
 (data from each column that is on the artist table)
-[ ] done
+
+[X] done
 
 User Story 3, album Index 
 
 As a visitor
-When I visit '/album_table_name'
+When I visit '/albums'
 Then I see each album in the system including the album's attributes
 (data from each column that is on the album table)
-[ ] done
+
+[X] done
 
 User Story 4, album Show 
 
 As a visitor
-When I visit '/album_table_name/:id'
+When I visit '/albums/:id'
 Then I see the album with that id including the album's attributes
 (data from each column that is on the album table)
+
 [ ] done
 
-User Story 5, artist albumren Index 
+User Story 5, artist album Index 
 
 As a visitor
-When I visit '/artists/:artist_id/album_table_name'
+When I visit '/artists/:artist_id/albums'
 Then I see each album that is associated with that artist with each album's attributes
 (data from each column that is on the album table)
 ActiveRecord
+
 [ ] done
 
 User Story 6, artist Index sorted by Most Recently Created 
@@ -47,6 +52,7 @@ As a visitor
 When I visit the artist index,
 I see that records are ordered by most recently created first
 And next to each of the records I see when it was created
+
 [ ] done
 
 User Story 7, artist album Count
@@ -75,7 +81,7 @@ User Story 10, artist album Index Link
 
 As a visitor
 When I visit a artist show page ('/artists/:id')
-Then I see a link to take me to that artist's `album_table_name` page ('/artists/:id/album_table_name')
+Then I see a link to take me to that artist's `album` page ('/artists/:id/album')
 Iteration 2
 CRUD
 [ ] done
@@ -114,10 +120,10 @@ As a visitor
 When I visit a artist albumren Index page
 Then I see a link to add a new adoptable album for that artist "Create album"
 When I click the link
-I am taken to '/artists/:artist_id/album_table_name/new' where I see a form to add a new adoptable album
+I am taken to '/artists/:artist_id/album/new' where I see a form to add a new adoptable album
 When I fill in the form with the album's attributes:
 And I click the button "Create album"
-Then a `POST` request is sent to '/artists/:artist_id/album_table_name',
+Then a `POST` request is sent to '/artists/:artist_id/album',
 a new album object/row is created for that artist,
 and I am redirected to the artist albums Index page where I can see the new album listed
 [ ] done
@@ -128,9 +134,9 @@ As a visitor
 When I visit a album Show page
 Then I see a link to update that album "Update album"
 When I click the link
-I am taken to '/album_table_name/:id/edit' where I see a form to edit the album's attributes:
+I am taken to '/album/:id/edit' where I see a form to edit the album's attributes:
 When I click the button to submit the form "Update album"
-Then a `PATCH` request is sent to '/album_table_name/:id',
+Then a `PATCH` request is sent to '/album/:id',
 the album's data is updated,
 and I am redirected to the album Show page where I see the album's updated information
 ActiveRecord
@@ -165,10 +171,10 @@ I should be taken to that artist's edit page where I can update its information 
 User Story 18, album Update From albums Index Page 
 
 As a visitor
-When I visit the `album_table_name` index page or a artist `album_table_name` index page
+When I visit the `album` index page or a artist `album` index page
 Next to every album, I see a link to edit that album's info
 When I click the link
-I should be taken to that `album_table_name` edit page where I can update its information just like in User Story 14
+I should be taken to that `album` edit page where I can update its information just like in User Story 14
 Iteration 3
 CRUD
 [ ] done
@@ -190,7 +196,7 @@ As a visitor
 When I visit a album show page
 Then I see a link to delete the album "Delete album"
 When I click the link
-Then a 'DELETE' request is sent to '/album_table_name/:id',
+Then a 'DELETE' request is sent to '/album/:id',
 the album is deleted,
 and I am redirected to the album index page where I no longer see this album
 ActiveRecord
@@ -218,10 +224,10 @@ I am returned to the artist Index Page where I no longer see that artist
 User Story 23, album Delete From albums Index Page 
 
 As a visitor
-When I visit the `album_table_name` index page or a artist `album_table_name` index page
+When I visit the `album` index page or a artist `album` index page
 Next to every album, I see a link to delete that album
 When I click the link
-I should be taken to the `album_table_name` index page where I no longer see that album
+I should be taken to the `album` index page where I no longer see that album
 Extensions
 [ ] done
 
@@ -229,15 +235,15 @@ Extension 1: Sort artists by Number of albumren
 
 As a visitor
 When I visit the artists Index Page
-Then I see a link to sort artists by the number of `album_table_name` they have
+Then I see a link to sort artists by the number of `album` they have
 When I click on the link
-I'm taken back to the artist Index Page where I see all of the artists in order of their count of `album_table_name` (highest to lowest) And, I see the number of albumren next to each artist name
+I'm taken back to the artist Index Page where I see all of the artists in order of their count of `album` (highest to lowest) And, I see the number of albumren next to each artist name
 [ ] done
 
 Extension 2: Search by name (exact match)
 
 As a visitor
-When I visit an index page ('/artists') or ('/album_table_name')
+When I visit an index page ('/artists') or ('/album')
 Then I see a text box to filter results by keyword
 When I type in a keyword that is an exact match of one or more of my records and press the Search button
 Then I only see records that are an exact match returned on the page
@@ -246,7 +252,7 @@ Then I only see records that are an exact match returned on the page
 Extension 3: Search by name (partial match)
 
 As a visitor
-When I visit an index page ('/artists') or ('/album_table_name')
+When I visit an index page ('/artists') or ('/album')
 Then I see a text box to filter results by keyword
 When I type in a keyword that is an partial match of one or more of my records and press the Search button
 Then I only see records that are an partial match returned on the page

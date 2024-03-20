@@ -6,10 +6,21 @@ RSpec.describe "Artist Index Page", type: :feature do
     @zappa = Artist.create(name: 'Frank Zappa', still_recording: false, number_of_singles: 60)
   end
 
-  it 'displays a list of all artists' do
-    visit '/artists'
+  describe 'user story 1' do
+    it 'displays a list of all artists' do
+      visit '/artists'
 
-    expect(page).to have_content('The Beatles')
-    expect(page).to have_content('Frank Zappa')
+      expect(page).to have_content('The Beatles')
+      expect(page).to have_content('Frank Zappa')
+    end
+  end
+
+  describe 'user story 6' do
+    it 'displays a list of all artists by most recently created' do
+      visit '/artists'
+      
+      # alphabetical by first letter of the name
+      expect('Frank Zappa').to appear_before('The Beatles')
+    end
   end
 end
