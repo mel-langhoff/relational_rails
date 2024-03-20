@@ -25,7 +25,7 @@ When I visit '/albums'
 Then I see each album in the system including the album's attributes
 (data from each column that is on the album table)
 
-[ ] done
+[X] done
 
 User Story 4, album Show 
 
@@ -33,15 +33,17 @@ As a visitor
 When I visit '/albums/:id'
 Then I see the album with that id including the album's attributes
 (data from each column that is on the album table)
+
 [ ] done
 
-User Story 5, artist albumren Index 
+User Story 5, artist album Index 
 
 As a visitor
 When I visit '/artists/:artist_id/albums'
 Then I see each album that is associated with that artist with each album's attributes
 (data from each column that is on the album table)
 ActiveRecord
+
 [ ] done
 
 User Story 6, artist Index sorted by Most Recently Created 
