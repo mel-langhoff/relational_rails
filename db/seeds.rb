@@ -8,5 +8,9 @@
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
 
-Artist.create(name: 'The Beatles', still_recording: false, number_of_singles: 50)
-Artist.create(name: 'Frank Zappa', still_recording: false, number_of_singles: 60)
+@beatles = Artist.create(name: 'The Beatles', still_recording: false, number_of_singles: 50)
+@zappa = Artist.create(name: 'Frank Zappa', still_recording: false, number_of_singles: 60)
+
+@help = Album.create(title: 'Help', on_vinyl: true, number_of_tracks: 10, artist_id: @beatles.id)
+@abbey = Album.create(title: 'Abbey Road', on_vinyl: false, number_of_tracks: 12, artist_id: @beatles.id)
+@white = Album.create(title: 'The White Album', on_vinyl: true, number_of_tracks: 20, artist_id: @beatles.id)
