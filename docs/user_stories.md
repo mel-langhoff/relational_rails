@@ -1,4 +1,4 @@
-[ ] done
+[X] done
 
 User Story 1, artist Index 
 
@@ -6,6 +6,7 @@ For each artist table
 As a visitor
 When I visit '/artists'
 Then I see the name of each artist record in the system
+
 [ ] done
 
 User Story 2, artist Show 
@@ -14,6 +15,7 @@ As a visitor
 When I visit '/artists/:id'
 Then I see the artist with that id including the artist's attributes
 (data from each column that is on the artist table)
+
 [ ] done
 
 User Story 3, album Index 
