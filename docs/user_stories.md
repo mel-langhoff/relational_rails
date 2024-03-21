@@ -42,9 +42,10 @@ As a visitor
 When I visit '/artists/:artist_id/albums'
 Then I see each album that is associated with that artist with each album's attributes
 (data from each column that is on the album table)
+
 ActiveRecord
 
-[ ] done
+[X] done
 
 User Story 6, artist Index sorted by Most Recently Created 
 
@@ -59,8 +60,10 @@ User Story 7, artist album Count
 
 As a visitor
 When I visit a artist's show page
-I see a count of the number of albumren associated with this artist
+I see a count of the number of albums associated with this artist
+
 Usability
+
 [ ] done
 
 User Story 8, album Index Link
