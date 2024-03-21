@@ -1,0 +1,9 @@
+<% @search_results.each do |artist| %>
+  <ul>
+    <li>Name: <%= artist.name %></li>
+    <li>Still recording? <%= artist.still_recording %></li>
+    <li>Number of singles: <%= artist.number_of_singles %></li>
+  </ul>
+<% end %>
+
+<%= link_to "Back", "/artists" %>
