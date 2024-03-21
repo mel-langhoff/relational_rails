@@ -31,5 +31,21 @@ RSpec.describe 'Album Show Page' do
       expect(page).to have_content(@abbey.number_of_tracks)
     end
   end
+
+  describe 'user story 14' do
+    it 'has a link to update an album' do
+      visit "/albums/#{@abbey.id}"
+
+      expect(page).to have_link('Edit Album', href: edit_album_path(@abbey))
+    end
+
+    it 'has a link that redirects to the album edit page' do
+      visit "/albums/#{@abbey.id}"
+
+      click_on 'Edit Album'
+      
+      expect(current_path).to eq edit_album_path(@abbey)
+    end
+  end
 end
 

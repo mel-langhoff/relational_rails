@@ -1,4 +1,6 @@
 <h1><%= @album.title %>'s Show Page</h1>
+<br>
+<%= link_to "Edit Album", edit_album_path(@album) %>
 
 <ol>
   <li>On vinyl? <%= @album.on_vinyl %></li>

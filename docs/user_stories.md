@@ -122,7 +122,7 @@ Then a `PATCH` request is sent to '/artists/:id',
 the artist's info is updated,
 and I am redirected to the artist's Show page where I see the artist's updated info
 
-[ ] done
+[X] done
 
 User Story 13, artist album Creation 
 
@@ -145,9 +145,9 @@ As a visitor
 When I visit a album Show page
 Then I see a link to update that album "Update album"
 When I click the link
-I am taken to '/album/:id/edit' where I see a form to edit the album's attributes:
+I am taken to '/albums/:id/edit' where I see a form to edit the album's attributes:
 When I click the button to submit the form "Update album"
-Then a `PATCH` request is sent to '/album/:id',
+Then a `PATCH` request is sent to '/albums/:id',
 the album's data is updated,
 and I am redirected to the album Show page where I see the album's updated information
 
