@@ -128,7 +128,7 @@ User Story 13, artist album Creation
 
 As a visitor
 When I visit a artist albums Index page
-Then I see a link to add a new adoptable album for that artist "Create album"
+Then I see a link to add a new album for that artist "Create album"
 When I click the link
 I am taken to '/artists/:artist_id/album/new' where I see a form to add a new adoptable album
 When I fill in the form with the album's attributes:

@@ -15,6 +15,15 @@ RSpec.describe "Artist Albums Index Page" do
       click_on 'All Albums'
 
       expect(current_path).to eq("/artists/#{@beatles.id}/albums")
+      expect(page).to have_content("Abbey Road")
+    end
+  end
+
+  describe 'user story 13' do
+    it 'has a link to add a new album for that particular artist' do
+      visit "/artists/#{@beatles.id}"
+
+      expect(page).to have_link("Add Album For This Artist", href: "/artists/#{@beatles.id}/album/new")
     end
   end
 end
