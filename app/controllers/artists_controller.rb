@@ -10,4 +10,8 @@ class ArtistsController < ApplicationController
     @albums_count = @artist.album_count
   end
 
+  def new
+    
+  end
+
 end

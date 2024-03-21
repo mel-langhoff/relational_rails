@@ -54,7 +54,7 @@ When I visit the artist index,
 I see that records are ordered by most recently created first
 And next to each of the records I see when it was created
 
-[ ] done
+[X] done
 
 User Story 7, artist album Count
 
@@ -64,20 +64,22 @@ I see a count of the number of albums associated with this artist
 
 Usability
 
-[ ] done
+[X] done
 
 User Story 8, album Index Link
 
 As a visitor
 When I visit any page on the site
 Then I see a link at the top of the page that takes me to the album Index
-[ ] done
+
+[X] done
 
 User Story 9, artist Index Link
 
 As a visitor
 When I visit any page on the site
 Then I see a link at the top of the page that takes me to the artist Index
+
 [ ] done
 
 User Story 10, artist album Index Link
@@ -85,8 +87,11 @@ User Story 10, artist album Index Link
 As a visitor
 When I visit a artist show page ('/artists/:id')
 Then I see a link to take me to that artist's `album` page ('/artists/:id/album')
+
 Iteration 2
+
 CRUD
+
 [ ] done
 
 User Story 11, artist Creation 
@@ -97,7 +102,7 @@ Then I see a link to create a new artist record, "New artist"
 When I click this link
 Then I am taken to '/artists/new' where I  see a form for a new artist record
 When I fill out the form with a new artist's attributes:
-And I click the button "Create artist" to submit the form
+And I click the button "Create Artist" to submit the form
 Then a `POST` request is sent to the '/artists' route,
 a new artist record is created,
 and I am redirected to the artist Index page where I see the new artist displayed.

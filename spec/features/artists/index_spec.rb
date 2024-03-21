@@ -23,4 +23,14 @@ RSpec.describe "Artist Index Page", type: :feature do
       expect('Frank Zappa').to appear_before('The Beatles')
     end
   end
+
+  describe 'user story 11' do
+    it 'has a link to create a new artist' do
+
+    end
+
+    it 'redirects to the artists/new page' do
+
+    end
+  end
 end
