@@ -237,16 +237,18 @@ Next to every album, I see a link to delete that album
 When I click the link
 I should be taken to the `album` index page where I no longer see that album
 Extensions
+
 [ ] done
 
-Extension 1: Sort artists by Number of albumren 
+Extension 1: Sort artists by Number of albums 
 
 As a visitor
 When I visit the artists Index Page
 Then I see a link to sort artists by the number of `album` they have
 When I click on the link
 I'm taken back to the artist Index Page where I see all of the artists in order of their count of `album` (highest to lowest) And, I see the number of albumren next to each artist name
-[ ] done
+
+[X] done
 
 Extension 2: Search by name (exact match)
 
@@ -255,7 +257,8 @@ When I visit an index page ('/artists') or ('/album')
 Then I see a text box to filter results by keyword
 When I type in a keyword that is an exact match of one or more of my records and press the Search button
 Then I only see records that are an exact match returned on the page
-[ ] done
+
+[X] done
 
 Extension 3: Search by name (partial match)
 

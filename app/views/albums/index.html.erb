@@ -7,3 +7,9 @@
   <li>Number of tracks: <%= album.number_of_tracks %></li>
 </ul>
 <% end %>
+
+<h2>Search by Album:</h2>
+<p><%= form_with(url: search_albums_path, method: "get") do |form| %>
+  <%= form.text_field :search, placeholder: "Enter search" %>
+  <%= form.submit "Search" %>
+<% end %>

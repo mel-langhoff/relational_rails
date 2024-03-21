@@ -5,3 +5,9 @@
     <li><%= artist.name %></li>
   </ul>
 <% end %>
+
+<h2>Search by Artist:</h2>
+<p><%= form_with(url: search_artists_path, method: "get") do |form| %>
+  <%= form.text_field :search, placeholder: "Enter search" %>
+  <%= form.submit "Search" %>
+<% end %>

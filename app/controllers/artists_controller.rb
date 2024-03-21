@@ -11,7 +11,13 @@ class ArtistsController < ApplicationController
   end
 
   def new
-    
+
   end
+
+  def search
+    @search_results = Artist.search(params[:search])
+    render partial: 'search_results'
+  end
+  
 
 end
