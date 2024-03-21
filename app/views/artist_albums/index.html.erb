@@ -7,3 +7,5 @@
   <li>Number of tracks: <%= album.number_of_tracks %></li>
 </ul>
 <% end %>
+                                        <%#  href: "/artists/#{@artist.id}/album/new" #%>
+<%= link_to "Add Album For This Artist", new_artist_album_path(@artist) %>

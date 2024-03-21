@@ -1,0 +1,14 @@
+<h1>New Album for <%= @artist.name %></h1>
+<br>
+<%= form_with url: artist_albums_path(@artist), method: :post do |f| %>
+  <%= f.label :title, "Title:" %>
+  <%= f.text_field :title %>
+<br>
+  <%= f.label :on_vinyl, "On vinyl?" %>
+  <%= f.text_field :on_vinyl %>
+<br>
+  <%= f.label :number_of_tracks, "Number of tracks:" %>
+  <%= f.number_field :number_of_tracks %>
+<br>
+  <%= f.submit "Add Album" %>
+<% end %>

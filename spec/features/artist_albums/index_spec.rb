@@ -21,9 +21,9 @@ RSpec.describe "Artist Albums Index Page" do
 
   describe 'user story 13' do
     it 'has a link to add a new album for that particular artist' do
-      visit "/artists/#{@beatles.id}"
+      visit "/artists/#{@beatles.id}/albums"
 
-      expect(page).to have_link("Add Album For This Artist", href: "/artists/#{@beatles.id}/album/new")
+      expect(page).to have_link("Add Album For This Artist", href: new_artist_album_path(@beatles.id))
     end
   end
 end
