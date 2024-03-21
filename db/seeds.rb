@@ -14,3 +14,5 @@
 @help = Album.create(title: 'Help', on_vinyl: true, number_of_tracks: 10, artist_id: @beatles.id)
 @abbey = Album.create(title: 'Abbey Road', on_vinyl: false, number_of_tracks: 12, artist_id: @beatles.id)
 @white = Album.create(title: 'The White Album', on_vinyl: true, number_of_tracks: 20, artist_id: @beatles.id)
+@overnite = Album.create(title: 'Overnite Sensation', on_vinyl: true, number_of_tracks: 11, artist_id: @zappa.id)
+@hotrats = Album.create(title: 'Hot Rats', on_vinyl: true, number_of_tracks: 15, artist_id: @zappa.id)

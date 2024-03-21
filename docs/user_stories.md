@@ -107,7 +107,7 @@ Then a `POST` request is sent to the '/artists' route,
 a new artist record is created,
 and I am redirected to the artist Index page where I see the new artist displayed.
 
-[ ] done
+[X] done
 
 User Story 12, artist Update 
 
@@ -128,12 +128,12 @@ User Story 13, artist album Creation
 
 As a visitor
 When I visit a artist albums Index page
-Then I see a link to add a new adoptable album for that artist "Create album"
+Then I see a link to add a new album for that artist "Create album"
 When I click the link
-I am taken to '/artists/:artist_id/album/new' where I see a form to add a new adoptable album
+I am taken to '/artists/:artist_id/albums/new' where I see a form to add a new album
 When I fill in the form with the album's attributes:
 And I click the button "Create album"
-Then a `POST` request is sent to '/artists/:artist_id/album',
+Then a `POST` request is sent to '/artists/:artist_id/albums',
 a new album object/row is created for that artist,
 and I am redirected to the artist albums Index page where I can see the new album listed
 
