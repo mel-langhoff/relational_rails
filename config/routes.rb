@@ -8,10 +8,9 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "posts#index"
   get "/artists", to: "artists#index"
+  get "/artists/new", to: "artists#new"
   get "/artists/:id", to: "artists#show"
-
-  # User Story 5
-  # is this in the right spot?
+  post "/artists", to: "artists#create"
   # as: :artist_albums => custom name to assign the route helper so it's artist_albums_path
   get "/artists/:artist_id/albums", to: "albums#index", as: :artist_albums
   get "/search_artists", to: "artists#search"
