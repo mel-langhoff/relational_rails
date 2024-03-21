@@ -1,25 +1,5 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## relational_rails
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-# relational_rails
+This is a relational rails project using Albums and Artists in a one-to-many relationships db structure. See /docs/user_stories for more specific information regarding each piece of functionality.
