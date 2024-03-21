@@ -2,15 +2,15 @@
 
 <% @artists.each do |artist| %>
   <ul>
-    <li><%= artist.name %></li>
-    <li><%= artist.still_recording %>
-    <li><%= artist.number_of_singles %>
+    <li>Name: <%= artist.name %></li>
+    <li>Still recording: <%= artist.still_recording %>
+    <li>Number of singles: <%= artist.number_of_singles %>
   </ul>
 <% end %>
 
 <%= link_to "Create new artist", "/artists/new" %>
 
-<h2>Search by Artist:</h2>
+<h2>Search by Artist Name:</h2>
 <p><%= form_with(url: search_artists_path, method: "get") do |form| %>
   <%= form.text_field :search, placeholder: "Enter search" %>
   <%= form.submit "Search" %>

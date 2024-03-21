@@ -92,7 +92,7 @@ Iteration 2
 
 CRUD
 
-[ ] done
+[X] done
 
 User Story 11, artist Creation 
 
