@@ -7,7 +7,6 @@ RSpec.describe 'Artist New Page' do
 
       expect(page).to have_button('Create Artist')
       expect(page).to have_field('Name')
-      expect(page).to have_field()
     end
 
     it 'redirects to the artists index page after creation' do

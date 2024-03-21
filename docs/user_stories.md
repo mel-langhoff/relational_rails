@@ -34,7 +34,7 @@ When I visit '/albums/:id'
 Then I see the album with that id including the album's attributes
 (data from each column that is on the album table)
 
-[ ] done
+[X] done
 
 User Story 5, artist album Index 
 
@@ -86,7 +86,7 @@ User Story 10, artist album Index Link
 
 As a visitor
 When I visit a artist show page ('/artists/:id')
-Then I see a link to take me to that artist's `album` page ('/artists/:id/album')
+Then I see a link to take me to that artist's `album` page ('/artists/:id/albums')
 
 Iteration 2
 

@@ -2,6 +2,8 @@
 
 <ul>
 <% @albums.each do |album| %>
-  <li><%= album.title %></li>
+  <li>Title: <%= album.title %></li>
+  <li>On Vinyl? <%= album.on_vinyl %></li>
+  <li>Number of tracks: <%= album.number_of_tracks %></li>
 </ul>
 <% end %>
