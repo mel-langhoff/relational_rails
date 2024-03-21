@@ -5,6 +5,7 @@
     <li>Name: <%= artist.name %></li>
     <li>Still recording: <%= artist.still_recording %>
     <li>Number of singles: <%= artist.number_of_singles %>
+    <li><%= link_to "Link to artist  show page", "/artists/#{artist.id}" %>
   </ul>
 <% end %>
 

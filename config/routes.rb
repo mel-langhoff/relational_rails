@@ -11,6 +11,8 @@ Rails.application.routes.draw do
   get "/artists/new", to: "artists#new"
   get "/artists/:id", to: "artists#show"
   post "/artists", to: "artists#create"
+  get "/artists/:id/edit", to: "artists#edit", as: :edit_artist
+  patch "/artists/:id", to: "artists#update"
   # as: :artist_albums => custom name to assign the route helper so it's artist_albums_path
   get "/artists/:artist_id/albums", to: "albums#index", as: :artist_albums
   get "/search_artists", to: "artists#search"

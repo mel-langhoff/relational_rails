@@ -23,6 +23,20 @@ class ArtistsController < ApplicationController
 
     redirect_to "/artists"
   end
+
+  def edit
+    @artist = Artist.find(params[:id])
+  end
+
+  def update
+    @artist = Artist.find(params[:id])
+    if @artist.update(artist_params)
+      redirect_to "/artists"
+    else
+      redirect_to "/artists/#{@artist.id}/edit"
+      flash[:alert] = "Error: #{error_message.(@artist.errors)}"
+    end
+  end
   
   private
 

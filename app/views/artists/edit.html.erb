@@ -1,0 +1,17 @@
+<h1>Update Attributes for <%= @artist.name %></h1>
+
+<%= form_with url: "/artists/#{@artist.id}", method: :patch do |f| %>
+  <p>
+    <%= f.label :name, "Name:" %>
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :still_recording, "Still recording?" %>
+    <%= f.check_box :still_recording %>
+  </p>
+  <p>
+    <%= f.label :number_of_singles, "Number of singles:" %>
+    <%= f.number_field :number_of_singles %>
+  </p>
+  <%= f.submit "Update Artist" %>
+<% end %>

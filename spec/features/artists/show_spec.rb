@@ -26,4 +26,16 @@ RSpec.describe 'Artist Show Page' do
       expect(page).to have_content(3)
     end
   end
+
+  describe 'user story 12' do
+    it 'has a link to update the artist' do
+      visit "/artists/#{@beatles.id}"
+
+      expect(page).to have_link("Update Artist")
+
+      click_on 'Update Artist'
+
+      expect(current_path).to eq("/artists/#{@beatles.id}/edit")
+    end
+  end
 end

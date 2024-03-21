@@ -11,6 +11,12 @@
   </head>
 
   <body>
+    <% flash.each do |type, message| %>
+      <section class=<%= type %>>
+        <p><%= message %></p>
+      </section>
+    <% end %>
+
     <p><%= link_to "Album Index", "/albums" %></p>
     <p><%= link_to "Artist Index", "/artists" %></p>
     <%= yield %>
