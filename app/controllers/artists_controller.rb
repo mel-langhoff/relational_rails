@@ -11,7 +11,6 @@ class ArtistsController < ApplicationController
   end
 
   def new
-    @artist = Artist.find(params[:artist_id])
   end
 
   def search
@@ -21,12 +20,14 @@ class ArtistsController < ApplicationController
 
   def create
     @artist = Artist.create(artist_params)
+
+    redirect_to "/artists"
   end
   
   private
 
   def artist_params
-    params.permit(:name, :on_vinyl, :number_of_singles)
+    params.permit(:name, :still_recording, :number_of_singles)
   end
 
 end

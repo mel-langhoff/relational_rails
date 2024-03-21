@@ -7,12 +7,12 @@ RSpec.describe 'Artist New Page' do
 
       expect(page).to have_button('Create Artist')
       expect(page).to have_field('Name:')
-      expect(page).to have_field('On Vinyl?')
+      expect(page).to have_field('Still recording?')
       expect(page).to have_field('Number of singles:')
 
       fill_in 'name', with: 'The Beatles'
-      check 'On Vinyl?'
-      fill_in 'number_of_tracks', with: '50'
+      check 'Still recording?'
+      fill_in 'number_of_singles', with: '50'
 
       click_on 'Create Artist'
 
