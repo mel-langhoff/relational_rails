@@ -10,8 +10,6 @@ RSpec.describe 'Artist Update Page' do
       # visit "/artist/#{@beatles.id}/edit"
       visit edit_artist_path(@beatles)
 
-
-      save_and_open_page
       expect(page).to have_field("Name:")
       expect(page).to have_field("Still recording?")
       expect(page).to have_field("Number of singles:")

@@ -1,0 +1,9 @@
+<h1>All Albums for <%= @artist.name %></h1>
+
+<ul>
+<% @albums.each do |album| %>
+  <li>Title: <%= album.title %></li>
+  <li>On Vinyl? <%= album.on_vinyl %></li>
+  <li>Number of tracks: <%= album.number_of_tracks %></li>
+</ul>
+<% end %>

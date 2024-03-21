@@ -1,5 +1,5 @@
 <h1><%= @artist.name %>'s Show Page</h1>
-<p><%= link_to "All Albums", artist_albums_path(artist_id: @artist.id) %>
+<p><%= link_to "All Albums", artist_albums_path(@artist) %>
 <p><%= link_to "Update Artist", "/artists/#{@artist.id}/edit" %>
 
 <ol>

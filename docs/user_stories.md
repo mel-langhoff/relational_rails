@@ -107,7 +107,7 @@ Then a `POST` request is sent to the '/artists' route,
 a new artist record is created,
 and I am redirected to the artist Index page where I see the new artist displayed.
 
-[ ] done
+[X] done
 
 User Story 12, artist Update 
 
