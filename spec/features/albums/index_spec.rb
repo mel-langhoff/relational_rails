@@ -33,4 +33,5 @@ RSpec.describe 'Albums Index Page' do
       expect(page).to have_content(@white.title)
     end
   end
+
 end

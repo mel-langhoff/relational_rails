@@ -10,6 +10,10 @@ RSpec.describe Artist, type: :model do
     @white = Album.create(title: 'The White Album', on_vinyl: true, number_of_tracks: 20, artist_id: @beatles.id)
   end
 
+  describe 'relationships' do
+    it { should have_many :albums }
+  end
+
   it '#most_recently_created' do
     expect(Artist.most_recently_created).to eq([@beatles, @zappa])
   end

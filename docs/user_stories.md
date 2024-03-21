@@ -106,6 +106,7 @@ And I click the button "Create Artist" to submit the form
 Then a `POST` request is sent to the '/artists' route,
 a new artist record is created,
 and I am redirected to the artist Index page where I see the new artist displayed.
+
 [ ] done
 
 User Story 12, artist Update 
@@ -120,12 +121,13 @@ And I click the button to submit the form
 Then a `PATCH` request is sent to '/artists/:id',
 the artist's info is updated,
 and I am redirected to the artist's Show page where I see the artist's updated info
+
 [ ] done
 
 User Story 13, artist album Creation 
 
 As a visitor
-When I visit a artist albumren Index page
+When I visit a artist albums Index page
 Then I see a link to add a new adoptable album for that artist "Create album"
 When I click the link
 I am taken to '/artists/:artist_id/album/new' where I see a form to add a new adoptable album
@@ -134,6 +136,7 @@ And I click the button "Create album"
 Then a `POST` request is sent to '/artists/:artist_id/album',
 a new album object/row is created for that artist,
 and I am redirected to the artist albums Index page where I can see the new album listed
+
 [ ] done
 
 User Story 14, album Update 
@@ -147,7 +150,9 @@ When I click the button to submit the form "Update album"
 Then a `PATCH` request is sent to '/album/:id',
 the album's data is updated,
 and I am redirected to the album Show page where I see the album's updated information
+
 ActiveRecord
+
 [ ] done
 
 User Story 15, album Index only shows `true` Records 
@@ -155,6 +160,7 @@ User Story 15, album Index only shows `true` Records
 As a visitor
 When I visit the album index
 Then I only see records where the boolean column is `true`
+
 [ ] done
 
 User Story 16, Sort artist's albumren in Alphabetical Order by name 
@@ -165,6 +171,7 @@ Then I see a link to sort albumren in alphabetical order
 When I click on the link
 I'm taken back to the artist's albumren Index Page where I see all of the artist's albumren in alphabetical order
 Usability
+
 [ ] done
 
 User Story 17, artist Update From artist Index Page 
@@ -174,6 +181,7 @@ When I visit the artist index page
 Next to every artist, I see a link to edit that artist's info
 When I click the link
 I should be taken to that artist's edit page where I can update its information just like in User Story 12
+
 [ ] done
 
 User Story 18, album Update From albums Index Page 
@@ -183,8 +191,11 @@ When I visit the `album` index page or a artist `album` index page
 Next to every album, I see a link to edit that album's info
 When I click the link
 I should be taken to that `album` edit page where I can update its information just like in User Story 14
+
 Iteration 3
+
 CRUD
+
 [ ] done
 
 User Story 19, artist Delete 
