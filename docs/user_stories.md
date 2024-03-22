@@ -209,7 +209,7 @@ Then a 'DELETE' request is sent to '/artists/:id',
 the artist is deleted, and all album records are deleted
 and I am redirected to the artist index page where I no longer see this artist
 
-[ ] done
+[X] done
 
 User Story 20, album Delete 
 
@@ -228,11 +228,13 @@ ActiveRecord
 User Story 21, Display Records Over a Given Threshold 
 
 As a visitor
-When I visit the artist's albumren Index Page
+When I visit the artist's albums Index Page
 I see a form that allows me to input a number value
 When I input a number value and click the submit button that reads 'Only return records with more than `number` of `column_name`'
 Then I am brought back to the current index page with only the records that meet that threshold shown.
+
 Usability
+
 [ ] done
 
 User Story 22, artist Delete From artist Index Page 
@@ -242,6 +244,7 @@ When I visit the artist index page
 Next to every artist, I see a link to delete that artist
 When I click the link
 I am returned to the artist Index Page where I no longer see that artist
+
 [ ] done
 
 User Story 23, album Delete From albums Index Page 
