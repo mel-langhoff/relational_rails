@@ -122,7 +122,7 @@ Then a `PATCH` request is sent to '/artists/:id',
 the artist's info is updated,
 and I am redirected to the artist's Show page where I see the artist's updated info
 
-[ ] done
+[X] done
 
 User Story 13, artist album Creation 
 
@@ -137,7 +137,7 @@ Then a `POST` request is sent to '/artists/:artist_id/albums',
 a new album object/row is created for that artist,
 and I am redirected to the artist albums Index page where I can see the new album listed
 
-[ ] done
+[X] done
 
 User Story 14, album Update 
 
@@ -145,15 +145,15 @@ As a visitor
 When I visit a album Show page
 Then I see a link to update that album "Update album"
 When I click the link
-I am taken to '/album/:id/edit' where I see a form to edit the album's attributes:
+I am taken to '/albums/:id/edit' where I see a form to edit the album's attributes:
 When I click the button to submit the form "Update album"
-Then a `PATCH` request is sent to '/album/:id',
+Then a `PATCH` request is sent to '/albums/:id',
 the album's data is updated,
 and I am redirected to the album Show page where I see the album's updated information
 
 ActiveRecord
 
-[ ] done
+[X] done
 
 User Story 15, album Index only shows `true` Records 
 
@@ -161,18 +161,19 @@ As a visitor
 When I visit the album index
 Then I only see records where the boolean column is `true`
 
-[ ] done
+[X] done
 
-User Story 16, Sort artist's albumren in Alphabetical Order by name 
+User Story 16, Sort artist's album in Alphabetical Order by name 
 
 As a visitor
-When I visit the artist's albumren Index Page
-Then I see a link to sort albumren in alphabetical order
+When I visit the artist's albums Index Page
+Then I see a link to sort albums in alphabetical order
 When I click on the link
-I'm taken back to the artist's albumren Index Page where I see all of the artist's albumren in alphabetical order
+I'm taken back to the artist's albums Index Page where I see all of the artist's albums in alphabetical order
+
 Usability
 
-[ ] done
+[X] done
 
 User Story 17, artist Update From artist Index Page 
 
@@ -182,7 +183,7 @@ Next to every artist, I see a link to edit that artist's info
 When I click the link
 I should be taken to that artist's edit page where I can update its information just like in User Story 12
 
-[ ] done
+[X] done
 
 User Story 18, album Update From albums Index Page 
 
@@ -196,7 +197,7 @@ Iteration 3
 
 CRUD
 
-[ ] done
+[X] done
 
 User Story 19, artist Delete 
 
@@ -207,7 +208,8 @@ When I click the link "Delete artist"
 Then a 'DELETE' request is sent to '/artists/:id',
 the artist is deleted, and all album records are deleted
 and I am redirected to the artist index page where I no longer see this artist
-[ ] done
+
+[X] done
 
 User Story 20, album Delete 
 
@@ -218,18 +220,22 @@ When I click the link
 Then a 'DELETE' request is sent to '/album/:id',
 the album is deleted,
 and I am redirected to the album index page where I no longer see this album
+
 ActiveRecord
-[ ] done
+
+[X] done
 
 User Story 21, Display Records Over a Given Threshold 
 
 As a visitor
-When I visit the artist's albumren Index Page
+When I visit the artist's albums Index Page
 I see a form that allows me to input a number value
-When I input a number value and click the submit button that reads 'Only return records with more than `number` of `column_name`'
+When I input a number value and click the submit button that reads 'Only return records with more than `number` of `number_of_tracks`'
 Then I am brought back to the current index page with only the records that meet that threshold shown.
+
 Usability
-[ ] done
+
+[X] done
 
 User Story 22, artist Delete From artist Index Page 
 
@@ -238,6 +244,7 @@ When I visit the artist index page
 Next to every artist, I see a link to delete that artist
 When I click the link
 I am returned to the artist Index Page where I no longer see that artist
+
 [ ] done
 
 User Story 23, album Delete From albums Index Page 

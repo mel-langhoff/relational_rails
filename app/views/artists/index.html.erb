@@ -1,11 +1,15 @@
 <h1>All Artists</h1>
 
 <% @artists.each do |artist| %>
+  <div id="info_<%= artist.id %>">
   <ul>
     <li>Name: <%= artist.name %></li>
-    <li>Still recording: <%= artist.still_recording %>
-    <li>Number of singles: <%= artist.number_of_singles %>
-    <li><%= link_to "Link to artist  show page", "/artists/#{artist.id}" %>
+    <li>Still recording: <%= artist.still_recording %></li>
+    <li>Number of singles: <%= artist.number_of_singles %></li>
+    <li><%= link_to "Link to artist show page", "/artists/#{artist.id}" %></li>
+    <li><%= link_to "Link to artist edit page", edit_artist_path(artist) %></li>
+    <li><%= link_to "Link to delete artist", "/artists/#{artist.id}", method: :delete %></li>
+
   </ul>
 <% end %>
 

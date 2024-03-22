@@ -37,6 +37,14 @@ class ArtistsController < ApplicationController
       flash[:alert] = "Error: #{error_message.(@artist.errors)}"
     end
   end
+
+  def destroy
+    artist = Artist.find(params[:id])
+    artist.albums.destroy_all
+    artist.destroy
+
+    redirect_to artists_path
+  end
   
   private
 

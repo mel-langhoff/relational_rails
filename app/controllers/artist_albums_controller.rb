@@ -20,6 +20,19 @@ class ArtistAlbumsController < ApplicationController
     end
   end
 
+  def sort
+    @artist = Artist.find(params[:artist_id])
+    @albums = @artist.albums.alphabetical_order
+
+    render partial: 'sort'
+  end
+
+  def threshold_filter
+    @artist = Artist.find(params[:id])
+    @albums_by_threshold_filter = Album.filter_by_threshold(params[:threshold])
+    render partial: 'threshold_filter'
+  end
+
   private
 
   def album_params

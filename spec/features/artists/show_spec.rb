@@ -38,4 +38,16 @@ RSpec.describe 'Artist Show Page' do
       expect(current_path).to eq("/artists/#{@beatles.id}/edit")
     end
   end
+
+  describe 'user story 19' do
+    it 'deletes an artist and associated albums and redirects to index without artist or associated albums' do
+      visit "/artists/#{@beatles.id}"
+
+      click_on 'Delete Artist'
+      
+      expect(current_path).to eq("/artists")
+      expect(page).to_not have_content('The Beatles')
+      expect(page).to_not have_content(@beatles.number_of_singles)
+    end
+  end
 end

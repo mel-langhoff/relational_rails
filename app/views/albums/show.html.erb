@@ -1,4 +1,8 @@
 <h1><%= @album.title %>'s Show Page</h1>
+<br>
+<%= link_to "Edit Album", edit_album_path(@album) %>
+<p><%= link_to "Delete Album", destroy_album_path(@album), method: :delete %>
+
 
 <ol>
   <li>On vinyl? <%= @album.on_vinyl %></li>

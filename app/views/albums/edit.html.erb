@@ -1,0 +1,17 @@
+<h1>Update Attributes for <%= "#{@album.title}" %></h1>
+
+<%= form_with url: "/albums/#{@album.id}", method: :patch do |f| %>
+  <p>
+    <%= f.label :title, "Title:" %>
+    <%= f.text_field :title %>
+  </p>
+  <p>
+    <%= f.label :on_vinyl, "On vinyl?" %>
+    <%= f.check_box :on_vinyl %>
+  </p>
+  <p>
+    <%= f.label :number_of_tracks, "Number of tracks:" %>
+    <%= f.number_field :number_of_tracks %>
+  </p>
+  <%= f.submit "Update Album" %>
+<% end %>

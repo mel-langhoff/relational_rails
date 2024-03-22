@@ -2,9 +2,9 @@ require 'rails_helper'
 
 RSpec.describe 'Album Show Page' do
   before :each do
-    @beatles = Artist.create(name: 'The Beatles', still_recording: false, number_of_singles: 50)
-    @help = Album.create(title: 'Help', on_vinyl: true, number_of_tracks: 10, artist_id: @beatles.id)
-    @abbey = Album.create(title: 'Abbey Road', on_vinyl: false, number_of_tracks: 12, artist_id: @beatles.id)
+    @beatles = Artist.create(id: 4, name: 'The Beatles', still_recording: false, number_of_singles: 50)
+    @help = Album.create(id: 1, title: 'Help', on_vinyl: true, number_of_tracks: 10, artist_id: @beatles.id)
+    @abbey = Album.create(id: 2, title: 'Abbey Road', on_vinyl: false, number_of_tracks: 12, artist_id: @beatles.id)
   end
 
   describe 'user story 4' do
@@ -29,6 +29,34 @@ RSpec.describe 'Album Show Page' do
       expect(page).to have_content(@help.title)
       expect(page).to have_content(@help.number_of_tracks)
       expect(page).to have_content(@abbey.number_of_tracks)
+    end
+  end
+
+  describe 'user story 14' do
+    it 'has a link to update an album' do
+      visit "/albums/#{@abbey.id}"
+
+      expect(page).to have_link('Edit Album', href: edit_album_path(@abbey))
+    end
+
+    it 'has a link that redirects to the album edit page' do
+      visit "/albums/#{@abbey.id}"
+
+      click_on 'Edit Album'
+      
+      expect(current_path).to eq edit_album_path(@abbey)
+    end
+  end
+
+  describe 'user story 20' do
+    it 'deletes an album and redirects to index without album' do
+      visit "/albums/#{@help.id}"
+
+      click_on 'Delete Album'
+
+      expect(current_path).to eq("/albums")
+      expect(page).to_not have_content('Help')
+      expect(page).to_not have_content(@help.number_of_tracks)
     end
   end
 end
