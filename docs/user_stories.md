@@ -223,7 +223,7 @@ and I am redirected to the album index page where I no longer see this album
 
 ActiveRecord
 
-[ ] done
+[X] done
 
 User Story 21, Display Records Over a Given Threshold 
 
