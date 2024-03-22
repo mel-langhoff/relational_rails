@@ -27,6 +27,8 @@ Rails.application.routes.draw do
   get "/albums/:id", to: "albums#show"
   get "/albums/:id/edit", to: "albums#edit", as: :edit_album
   patch "/albums/:id", to: "albums#update"
+  delete "/albums/:id", to: "albums#destroy", as: :destroy_album
+
   get "/search_albums", to: "albums#search"
   
 end

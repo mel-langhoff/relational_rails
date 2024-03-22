@@ -47,5 +47,17 @@ RSpec.describe 'Album Show Page' do
       expect(current_path).to eq edit_album_path(@abbey)
     end
   end
+
+  describe 'user story 20' do
+    it 'deletes an album and redirects to index without album' do
+      visit "/artists/#{@abbey.id}"
+
+      click_on 'Delete Album'
+      
+      expect(current_path).to eq("/albums")
+      expect(page).to_not have_content('Abbey Road')
+      expect(page).to_not have_content(@abbey.number_of_tracks)
+    end
+  end
 end
 
