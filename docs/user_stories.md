@@ -153,7 +153,7 @@ and I am redirected to the album Show page where I see the album's updated infor
 
 ActiveRecord
 
-[ ] done
+[X] done
 
 User Story 15, album Index only shows `true` Records 
 

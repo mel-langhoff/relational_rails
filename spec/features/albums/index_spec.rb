@@ -18,4 +18,14 @@ RSpec.describe 'Albums Index Page' do
       expect(page).to have_content('The White Album')
     end
   end
+
+  describe 'user story 14' do
+    it 'displays only albums with true for on_vinyl attr' do
+      visit "/albums" 
+
+      expect(page).to have_content('Help')
+      expect(page).to_not have_content('Abbey Road')
+      expect(page).to have_content('The White Album')
+    end
+  end
 end
