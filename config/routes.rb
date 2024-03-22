@@ -14,6 +14,7 @@ Rails.application.routes.draw do
   get "/artists/:id/edit", to: "artists#edit", as: :edit_artist
   patch "/artists/:id", to: "artists#update"
   delete "/artists/:id", to: "artists#destroy", as: :destroy_artist
+  get "/artists/sort_by_album_number", to: "artists#sort_by_album_number", as: :sort_artists_by_album_number
   get "/search_artists", to: "artists#search"
 
   # as: :artist_albums => custom name to assign the route helper so it's artist_albums_path

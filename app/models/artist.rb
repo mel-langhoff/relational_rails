@@ -8,4 +8,10 @@ class Artist < ApplicationRecord
   def album_count
     albums.count
   end
+
+  def self.sort_by_album_number
+    joins(:albums)
+    .group('artists.id')
+    .order('COUNT(albums.id) DESC')
+  end
 end
