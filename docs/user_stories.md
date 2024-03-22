@@ -235,7 +235,7 @@ Then I am brought back to the current index page with only the records that meet
 
 Usability
 
-[ ] done
+[X] done
 
 User Story 22, artist Delete From artist Index Page 
 

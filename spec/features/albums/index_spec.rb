@@ -39,4 +39,18 @@ RSpec.describe 'Albums Index Page' do
       end
     end    
   end
+
+  describe 'user story 23' do
+    it 'has a link to delete each album next to each album' do
+      visit '/albums'
+
+      within "#info_#{@help.id}" do
+        expect(page).to have_link('Link to delete album', href: destroy_album_path(@help))
+      end
+
+      within "#info_#{@white.id}" do
+        expect(page).to have_link('Link to delete album', href: destroy_album_path(@white))
+      end
+    end    
+  end
 end
