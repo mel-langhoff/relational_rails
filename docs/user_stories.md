@@ -197,7 +197,7 @@ Iteration 3
 
 CRUD
 
-[ ] done
+[X] done
 
 User Story 19, artist Delete 
 
