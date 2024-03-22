@@ -48,7 +48,7 @@ class ArtistsController < ApplicationController
 
   def sort_by_album_number
     @artist = Artist.find(params[:id])
-    @sorted_albums = @artist.album.sort_by_album_number
+    @sorted_albums = @artist.album.
 
     render partial: 'sort_by_album_number'
   end
