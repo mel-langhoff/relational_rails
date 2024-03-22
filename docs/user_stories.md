@@ -230,7 +230,7 @@ User Story 21, Display Records Over a Given Threshold
 As a visitor
 When I visit the artist's albums Index Page
 I see a form that allows me to input a number value
-When I input a number value and click the submit button that reads 'Only return records with more than `number` of `column_name`'
+When I input a number value and click the submit button that reads 'Only return records with more than `number` of `number_of_tracks`'
 Then I am brought back to the current index page with only the records that meet that threshold shown.
 
 Usability

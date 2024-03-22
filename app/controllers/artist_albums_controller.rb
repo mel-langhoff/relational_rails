@@ -27,6 +27,11 @@ class ArtistAlbumsController < ApplicationController
     render partial: 'sort'
   end
 
+  def threshold_filter
+    @albums_by_threshold_filter = Album.filter_by_threshold(params[:threshold])
+    render partial: 'threshold_filter'
+  end
+
   private
 
   def album_params

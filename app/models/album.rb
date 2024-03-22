@@ -8,4 +8,8 @@ class Album < ApplicationRecord
   def self.alphabetical_order
     order(title: :asc)
   end
+
+  def self.filter_by_threshold(threshold)
+    where('number_of_tracks > ?', threshold)
+  end
 end

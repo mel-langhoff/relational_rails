@@ -41,58 +41,17 @@ RSpec.describe "Artist Albums Index Page" do
   end
 
   describe 'user story 21' do
-    it 'has a search form that only allows number input for number of singles' do
-      visit "/artists/#{@beatles.id}/albums"
-
-      expect(page).to have_field('Sort by artist: number of singles')
-      expect(page).to have_field('Sort by album: number of tracks')
-
-      fill_in 'Number of singles:', with: "50"
-
-      expect(page).to have_content('The Beatles')
-    end
-
     it 'has a search form that only allows number input for number of tracks' do
       visit "/artists/#{@beatles.id}/albums"
 
-      expect(page).to have_field('Sort by artist: number of singles')
-      expect(page).to have_field('Sort by album: number of tracks')
+      expect(page).to have_field('Number of tracks threshold:')
+      expect(page).to have_button('Search')
 
-      fill_in 'Number of tracks:', with: "12"
+      fill_in 'Number of tracks threshold:', with: "12"
+      click_on "Search"
 
       expect(page).to have_content('Abbey Road')
-    end
-
-    it 'has a search form that errors with non-numerical input for number of tracks' do
-      visit "/artists/#{@beatles.id}/albums"
-
-      expect(page).to have_field('Sort by artist: number of singles')
-      expect(page).to have_field('Sort by album: number of tracks')
-
-      fill_in 'Number of singles', with: "abcdefg"
-
-      expect(ERROR TEST GOES HERE)
-    end
-
-    it 'has a search form that errors with non-numerical input for number of singles' do
-      visit "/artists/#{@beatles.id}/albums"
-
-      expect(page).to have_field('Sort by artist: number of singles')
-      expect(page).to have_field('Sort by album: number of tracks')
-
-      fill_in 'Number of singles', with: "abcdefg"
-
-      expect(ERROR TEST GOES HERE)
-    end
-
-    it 'allows a search by threshold by number of artists table, number_of_singles column' do
-      visit "/artists/#{@beatles.id}/albums"
-
-    end
-
-    it 'allows a search by threshold by number of albums table, number_of_tracks column' do
-      visit "/artists/#{@beatles.id}/albums"
-
+      expect(page).to have_content('Help')
     end
   end
 end
