@@ -163,13 +163,14 @@ Then I only see records where the boolean column is `true`
 
 [ ] done
 
-User Story 16, Sort artist's albumren in Alphabetical Order by name 
+User Story 16, Sort artist's album in Alphabetical Order by name 
 
 As a visitor
-When I visit the artist's albumren Index Page
-Then I see a link to sort albumren in alphabetical order
+When I visit the artist's albums Index Page
+Then I see a link to sort albums in alphabetical order
 When I click on the link
-I'm taken back to the artist's albumren Index Page where I see all of the artist's albumren in alphabetical order
+I'm taken back to the artist's albums Index Page where I see all of the artist's albums in alphabetical order
+
 Usability
 
 [ ] done

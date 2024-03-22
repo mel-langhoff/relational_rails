@@ -18,4 +18,10 @@ RSpec.describe Album do
     expect(vinyl_albums).to include(@white)
     expect(vinyl_albums).not_to include(@abbey)
   end
+
+  it "#alphabetical_order" do
+    @alphabetical_albums = Album.alphabetical_order
+    expect(@alphabetical_albums.first).to eq(@abbey)
+    expect(@alphabetical_albums.last).to eq(@white)
+  end
 end

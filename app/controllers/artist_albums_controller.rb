@@ -20,6 +20,9 @@ class ArtistAlbumsController < ApplicationController
     end
   end
 
+  def sort
+
+  end
   private
 
   def album_params
