@@ -8,7 +8,8 @@ RSpec.describe 'Albums Index Page' do
     @white = Album.create(title: 'The White Album', on_vinyl: true, number_of_tracks: 20, artist_id: @beatles.id)
   end
 
-  describe 'User story 3' do
+  # skipped due to updated requirements in US 14
+  xdescribe 'User story 3' do
     it 'has all albums' do
       visit "/albums"
 

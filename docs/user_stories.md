@@ -137,7 +137,7 @@ Then a `POST` request is sent to '/artists/:artist_id/albums',
 a new album object/row is created for that artist,
 and I am redirected to the artist albums Index page where I can see the new album listed
 
-[ ] done
+[X] done
 
 User Story 14, album Update 
 
