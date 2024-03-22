@@ -12,9 +12,10 @@
 
   </ul>
 <% end %>
-
-<%= link_to "Create new artist", "/artists/new" %>
-
+<br>
+<p><%= link_to "Create new artist", "/artists/new" %></p>
+<p><%= link_to "Sort by number of albums", sort_artists_by_album_number_path %></p>
+<br>
 <h2>Search by Artist Name:</h2>
 <p><%= form_with(url: search_artists_path, method: "get") do |form| %>
   <%= form.text_field :search, placeholder: "Enter search" %>

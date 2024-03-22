@@ -1,0 +1,9 @@
+<% @sorted_albums.each do |album| %>
+  <ul>
+    <li>Title: <%= album.title %></li>
+    <li>On vinyl? <%= album.on_vinyl %></li>
+    <li>Number of tracks: <%= album.number_of_tracks %></li>
+  </ul>
+<% end %>
+
+<%= link_to "Back", "/albums" %>

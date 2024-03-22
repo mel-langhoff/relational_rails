@@ -67,4 +67,13 @@ RSpec.describe "Artist Index Page", type: :feature do
       end
     end
   end
+
+  describe 'extension 1' do
+    it 'has a link to sort by album number' do
+      visit '/albums'
+
+      save_and_open_page
+      expect(page).to have_content('Sort by number of albums')
+    end
+  end
 end
