@@ -2,9 +2,9 @@ require 'rails_helper'
 
 RSpec.describe 'Album Show Page' do
   before :each do
-    @beatles = Artist.create(name: 'The Beatles', still_recording: false, number_of_singles: 50)
-    @help = Album.create(title: 'Help', on_vinyl: true, number_of_tracks: 10, artist_id: @beatles.id)
-    @abbey = Album.create(title: 'Abbey Road', on_vinyl: false, number_of_tracks: 12, artist_id: @beatles.id)
+    @beatles = Artist.create(id: 4, name: 'The Beatles', still_recording: false, number_of_singles: 50)
+    @help = Album.create(id: 1, title: 'Help', on_vinyl: true, number_of_tracks: 10, artist_id: @beatles.id)
+    @abbey = Album.create(id: 2, title: 'Abbey Road', on_vinyl: false, number_of_tracks: 12, artist_id: @beatles.id)
   end
 
   describe 'user story 4' do
@@ -50,13 +50,13 @@ RSpec.describe 'Album Show Page' do
 
   describe 'user story 20' do
     it 'deletes an album and redirects to index without album' do
-      visit "/artists/#{@abbey.id}"
+      visit "/albums/#{@help.id}"
 
       click_on 'Delete Album'
-      
+
       expect(current_path).to eq("/albums")
-      expect(page).to_not have_content('Abbey Road')
-      expect(page).to_not have_content(@abbey.number_of_tracks)
+      expect(page).to_not have_content('Help')
+      expect(page).to_not have_content(@help.number_of_tracks)
     end
   end
 end

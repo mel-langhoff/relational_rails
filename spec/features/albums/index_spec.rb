@@ -8,16 +8,16 @@ RSpec.describe 'Albums Index Page' do
     @white = Album.create(title: 'The White Album', on_vinyl: true, number_of_tracks: 20, artist_id: @beatles.id)
   end
 
-  # skipped due to updated requirements in US 14
-  xdescribe 'User story 3' do
-    it 'has all albums' do
-      visit "/albums"
+  # commented out due to updated requirements in US 14
+  # describe 'User story 3' do
+  #   it 'has all albums' do
+  #     visit "/albums"
 
-      expect(page).to have_content('Help')
-      expect(page).to have_content('Abbey Road')
-      expect(page).to have_content('The White Album')
-    end
-  end
+  #     expect(page).to have_content('Help')
+  #     expect(page).to have_content('Abbey Road')
+  #     expect(page).to have_content('The White Album')
+  #   end
+  # end
 
   describe 'user story 14' do
     it 'displays only albums with true for on_vinyl attr' do
@@ -37,14 +37,6 @@ RSpec.describe 'Albums Index Page' do
         expect(page).to have_link('Link to album edit page', href: edit_album_path(@help))
         expect(page).to_not have_link('Link to album edit page', href: edit_album_path(@abbey))
       end
-
-      # within "#info_#{@abbey.id}" do
-      #   expect(page).to have_link('Link to album edit page', href: edit_album_path(@abbey))
-      # end
-
-      # within "#info_#{@white.id}" do
-      # expect(page).to have_link('Link to album edit page', href: edit_album_path(@white))
-      # end
     end    
   end
 end
