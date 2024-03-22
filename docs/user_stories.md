@@ -245,7 +245,7 @@ Next to every artist, I see a link to delete that artist
 When I click the link
 I am returned to the artist Index Page where I no longer see that artist
 
-[ ] done
+[X] done
 
 User Story 23, album Delete From albums Index Page 
 
