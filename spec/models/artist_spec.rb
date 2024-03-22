@@ -21,4 +21,8 @@ RSpec.describe Artist, type: :model do
   it '#album_count' do
     expect(@beatles.album_count).to eq(3)
   end
+
+  it '#sort_by_album_number' do
+    
+  end
 end

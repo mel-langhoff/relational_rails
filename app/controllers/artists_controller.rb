@@ -45,6 +45,13 @@ class ArtistsController < ApplicationController
 
     redirect_to artists_path
   end
+
+  def sort_by_album_number
+    @artist = Artist.find(params[:id])
+    @sorted_albums = @artist.album.sort_by_album_number
+
+    render partial: 'sort_by_album_number'
+  end
   
   private
 
