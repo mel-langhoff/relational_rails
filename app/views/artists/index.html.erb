@@ -1,11 +1,13 @@
 <h1>All Artists</h1>
 
 <% @artists.each do |artist| %>
+  <div id="info_<%= artist.id %>">
   <ul>
     <li>Name: <%= artist.name %></li>
     <li>Still recording: <%= artist.still_recording %>
     <li>Number of singles: <%= artist.number_of_singles %>
-    <li><%= link_to "Link to artist  show page", "/artists/#{artist.id}" %>
+    <li><%= link_to "Link to artist show page", "/artists/#{artist.id}" %>
+    <li><%= link_to "Link to artist edit page", edit_artist_path(artist) %>
   </ul>
 <% end %>
 

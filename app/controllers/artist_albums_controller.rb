@@ -21,8 +21,12 @@ class ArtistAlbumsController < ApplicationController
   end
 
   def sort
+    @artist = Artist.find(params[:artist_id])
+    @albums = @artist.albums.alphabetical_order
 
+    render partial: 'sort'
   end
+
   private
 
   def album_params

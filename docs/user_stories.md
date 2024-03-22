@@ -161,7 +161,7 @@ As a visitor
 When I visit the album index
 Then I only see records where the boolean column is `true`
 
-[ ] done
+[X] done
 
 User Story 16, Sort artist's album in Alphabetical Order by name 
 
@@ -173,7 +173,7 @@ I'm taken back to the artist's albums Index Page where I see all of the artist's
 
 Usability
 
-[ ] done
+[X] done
 
 User Story 17, artist Update From artist Index Page 
 

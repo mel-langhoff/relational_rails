@@ -39,4 +39,19 @@ RSpec.describe "Artist Index Page", type: :feature do
 
     end
   end
+
+
+  describe 'user story 17' do
+    it 'has a link to each artists edit page next to each artist' do
+      visit '/artists'
+
+      within "#info_#{@beatles.id}" do
+        expect(page).to have_link('Link to artist edit page', href: edit_artist_path(@beatles))
+      end
+
+      within "#info_#{@zappa.id}" do
+        expect(page).to have_link('Link to artist edit page', href: edit_artist_path(@zappa))
+      end
+    end
+  end
 end

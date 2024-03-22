@@ -7,5 +7,8 @@
   <li>Number of tracks: <%= album.number_of_tracks %></li>
 </ul>
 <% end %>
+<br>
                                         <%#  href: "/artists/#{@artist.id}/album/new" #%>
 <%= link_to "Add Album For This Artist", new_artist_album_path(@artist) %>
+<br>
+<%= link_to "Sort Alphabetically", sort_artist_albums_path(artist_id: @artist.id), method: :get %>
