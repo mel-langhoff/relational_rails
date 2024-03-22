@@ -183,7 +183,7 @@ Next to every artist, I see a link to edit that artist's info
 When I click the link
 I should be taken to that artist's edit page where I can update its information just like in User Story 12
 
-[ ] done
+[X] done
 
 User Story 18, album Update From albums Index Page 
 
@@ -208,6 +208,7 @@ When I click the link "Delete artist"
 Then a 'DELETE' request is sent to '/artists/:id',
 the artist is deleted, and all album records are deleted
 and I am redirected to the artist index page where I no longer see this artist
+
 [ ] done
 
 User Story 20, album Delete 
@@ -219,7 +220,9 @@ When I click the link
 Then a 'DELETE' request is sent to '/album/:id',
 the album is deleted,
 and I am redirected to the album index page where I no longer see this album
+
 ActiveRecord
+
 [ ] done
 
 User Story 21, Display Records Over a Given Threshold 
