@@ -2,9 +2,12 @@
 
 <ul>
 <% @albums.each do |album| %>
+<div id="info_<%= album.id %>">
   <li>Title: <%= album.title %></li>
   <li>On Vinyl? <%= album.on_vinyl %></li>
   <li>Number of tracks: <%= album.number_of_tracks %></li>
+  <li><%= link_to "Link to album edit page", edit_album_path(album) %>
+</div>
 </ul>
 <% end %>
 
