@@ -20,6 +20,7 @@ class ArtistAlbumsController < ApplicationController
     end
   end
 
+  #redo these
   def sort
     @artist = Artist.find(params[:artist_id])
     @albums = @artist.albums.alphabetical_order
